@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Careers - Wellington Movers v2.0</title>
-
-<!-- FIXED LINK PREVIEW FOR WHATSAPP -->
-<meta property="og:title" content="We're Hiring! Wellington Movers - 7 Positions">
-<meta property="og:description" content="Truck Driver, Fleet Manager, Accountant + 4 more roles. Competitive pay + Medical. Apply now!">
+<meta property="og:title" content="We're Hiring! Wellington Movers - 8 Positions">
+<meta property="og:description" content="Packers, Truck Driver, Fleet Manager, Accountant + 4 more. Competitive pay + Medical. Apply now!">
 <meta property="og:image" content="https://devkimani-wellington.github.io/Wellington-movers-and-logistics-job-application-/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -15,7 +13,6 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://devkimani-wellington.github.io/Wellington-movers-and-logistics-job-application-/preview.jpg">
-
 <style>
 :root{--navy:#0A1931;--gold:#C9A227;--gold2:#FFD700}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter, sans-serif}
@@ -32,16 +29,14 @@ header img{height:75px;width:auto;object-fit:contain;filter:drop-shadow(0 0 6px 
 .hero p{opacity:.9;margin-top:10px;animation:fadeUp 1s}
 .jobs{max-width:1250px;margin:30px auto;padding:0 18px;display:grid;grid-template-columns:2.2fr 1fr;gap:22px}
 .card{background:white;border-radius:18px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.07);animation:fadeUp .6s;transition:.3s}
-.card:hover{transform:translateY(-4px)}
 .pos{border:2px solid #e8e8e8;border-radius:14px;padding:14px;text-align:center;cursor:pointer;transition:.3s;position:relative;background:white}
 .pos:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 20px rgba(201,162,39,.25)}
 .pos.selected{border-color:var(--gold);background:linear-gradient(135deg,#fff9e0,#fff)}
 .pos b{display:block;margin-top:6px}
 .pos small{font-size:11px;opacity:.7}
 .badge{position:absolute;top:-8px;right:-8px;background:var(--gold);color:var(--navy);font-size:9px;padding:3px 7px;border-radius:20px;font-weight:800}
-.form input,.form select,.form textarea{width:100%;padding:12px;border:1.5px solid #ddd;border-radius:10px;margin-top:6px;transition:.2s}
-.form input:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(201,162,39,.2)}
-.form label{font-size:11px;font-weight:800;margin-top:12px;display:block;letter-spacing:.5px}
+.form input,.form select,.form textarea{width:100%;padding:12px;border:1.5px solid #ddd;border-radius:10px;margin-top:6px}
+.form label{font-size:11px;font-weight:800;margin-top:12px;display:block}
 .score-box{margin-top:12px;padding:12px;border-radius:10px;display:none;font-size:12px;font-weight:700}
 .score-high{background:#e6f7e6;color:#1a7a1a;border:1px solid #6bcf6b}
 .score-mid{background:#fff8e0;color:#8a6d00;border:1px solid #ffd54f}
@@ -54,23 +49,12 @@ th{background:var(--navy);color:white}
 </style>
 </head>
 <body>
-<header>
-<div class="logo-box">
-<img src="logo.png" alt="Wellington Movers">
-<div style="color:white;line-height:1.1"><div style="font-weight:900;font-size:20px;letter-spacing:.5px">WELLINGTON MOVERS</div><div style="color:var(--gold);font-size:12px;font-weight:700">INVESTMENTS & LOGISTICS</div><div style="font-size:9px;opacity:.7">Moving Value. Connecting Markets. Building Tomorrow.</div></div>
-</div>
-</header>
-
-<div class="hero">
-<h1>Join Our Team — We're Hiring 7 Roles!</h1>
-<p>Be part of Nairobi's fastest growing logistics company. Competitive pay + Medical + Growth</p>
-<div style="margin-top:18px;display:inline-block;background:rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:12px;border:1px solid rgba(201,162,39,.3)">Movers always stay successful the longest</div>
-</div>
-
+<header><div class="logo-box"><img src="logo.png" alt="Wellington Movers"><div style="color:white;line-height:1.1"><div style="font-weight:900;font-size:20px">WELLINGTON MOVERS</div><div style="color:var(--gold);font-size:12px;font-weight:700">INVESTMENTS & LOGISTICS</div><div style="font-size:9px;opacity:.7">Moving Value. Connecting Markets. Building Tomorrow.</div></div></div></header>
+<div class="hero"><h1>Join Our Team — We're Hiring 8 Roles!</h1><p>Be part of Nairobi's fastest growing logistics company. Competitive pay + Medical + Growth</p><div style="margin-top:18px;display:inline-block;background:rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:12px;border:1px solid rgba(201,162,39,.3)">Movers always stay successful the longest</div></div>
 <div class="jobs" id="mainJobs">
-<div>
-<div class="card"><h3>✨ Open Positions (Click to Apply)</h3>
+<div><div class="card"><h3>✨ Open Positions (Click to Apply)</h3>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px;margin-top:14px">
+<div class="pos" onclick="selectPos('Packers')" style="border-color:var(--gold)"><span class="badge">HOT</span>🎁<b>Packers</b><small>Packing & Handling • Nairobi</small></div>
 <div class="pos" onclick="selectPos('Truck Driver')"><span class="badge">HOT</span>🚛<b>Truck Driver</b><small>BCE License • 2yr exp</small></div>
 <div class="pos" onclick="selectPos('Lorry Driver')">🚚<b>Lorry Driver</b><small>Nationwide • Per Diem</small></div>
 <div class="pos" onclick="selectPos('Mover Loader')">💪<b>Mover Loader</b><small>Warehouse & Field</small></div>
@@ -78,48 +62,24 @@ th{background:var(--navy);color:white}
 <div class="pos" onclick="selectPos('Logistics Officer')">📦<b>Logistics Officer</b><small>Planning & Ops</small></div>
 <div class="pos" onclick="selectPos('Fleet Manager')" style="border-color:var(--gold)"><span class="badge">NEW</span>👔<b>Fleet Manager</b><small>Lead Team • 3yr exp • Ksh 80k+</small></div>
 <div class="pos" onclick="selectPos('Accountant')" style="border-color:var(--gold)"><span class="badge">NEW</span>💰<b>Accountant</b><small>CPA • QuickBooks • Ksh 60k+</small></div>
-</div>
-</div>
-</div>
-
-<div>
-<div class="card form" id="apply">
-<div style="background:linear-gradient(90deg,var(--gold),var(--gold2));padding:10px;border-radius:10px;text-align:center;font-weight:900;letter-spacing:.5px">Apply Now - Auto Scored</div>
+</div></div></div>
+<div><div class="card form" id="apply"><div style="background:linear-gradient(90deg,var(--gold),var(--gold2));padding:10px;border-radius:10px;text-align:center;font-weight:900">Apply Now - Auto Scored</div>
 <form id="jobForm" action="https://formspree.io/f/xzeeerzz" method="POST" enctype="multipart/form-data" onsubmit="return handleSubmit(event)">
 <input type="hidden" name="_subject" value="NEW APPLICATION - Wellington Movers">
 <label>Full Name *</label><input type="text" name="Full Name" id="fname" required placeholder="Jane Wanjiku">
 <label>Phone *</label><input type="tel" name="Phone" required placeholder="0741929030">
 <label>ID Number</label><input type="text" name="ID" placeholder="12345678">
-<label>Position *</label><select name="Position" id="position" required><option value="">-- Select --</option><option>Truck Driver</option><option>Lorry Driver</option><option>Mover Loader</option><option>Customer Care</option><option>Logistics Officer</option><option>Fleet Manager</option><option>Accountant</option></select>
-<label>Years Experience *</label><input type="text" name="Experience" id="exp" required placeholder="e.g. 3 years BCE License">
-<label>Skills / Qualifications</label><input type="text" name="Skills" id="skills" placeholder="e.g. CPA, Leadership, BCE, Safety">
+<label>Position *</label><select name="Position" id="position" required><option value="">-- Select --</option><option>Packers</option><option>Truck Driver</option><option>Lorry Driver</option><option>Mover Loader</option><option>Customer Care</option><option>Logistics Officer</option><option>Fleet Manager</option><option>Accountant</option></select>
+<label>Years Experience *</label><input type="text" name="Experience" id="exp" required placeholder="e.g. 3 years packing">
+<label>Skills / Qualifications</label><input type="text" name="Skills" id="skills" placeholder="e.g. Packing, Handling, Safety, Organized">
 <label>Upload CV (PDF/DOCX) *</label><input type="file" name="CV" id="cvfile" accept=".pdf,.doc,.docx" required onchange="screenCV()">
 <div id="scoreBox" class="score-box"></div>
 <label>Cover Letter</label><textarea name="Cover Letter" rows="3" placeholder="Why fit?"></textarea>
 <button type="submit" class="btn-gold" style="margin-top:14px">Submit</button>
 <input type="hidden" name="CV Score" id="cvScoreInput">
-</form>
-<p style="font-size:10px;text-align:center;margin-top:8px;opacity:.6">Email:Wellington.ke01@gmail.com<br>2 business days response</p>
-</div>
-</div>
-</div>
-
-<div id="admin">
-<div class="card">
-<div style="display:flex;justify-content:space-between;align-items:center"><h3>🔒 Admin Dashboard - All Applicants</h3><button onclick="hideAdmin()" style="padding:6px 12px;border-radius:8px;border:1px solid #ddd;cursor:pointer">Back to Jobs</button></div>
-<div style="margin-top:12px;overflow:auto">
-<table><thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Position</th><th>Exp</th><th>Score</th><th>Status</th></tr></thead><tbody id="adminBody"></tbody></table>
-</div>
-<div style="margin-top:12px;display:flex;gap:8px">
-<button onclick="exportCSV()" style="padding:8px 14px;border-radius:8px;background:var(--navy);color:white;border:none;cursor:pointer;font-size:11px">Export CSV</button>
-<button onclick="clearApplicants()" style="padding:8px 14px;border-radius:8px;background:#a00;color:white;border:none;cursor:pointer;font-size:11px">Clear All</button>
-</div>
-<p style="font-size:10px;margin-top:8px;opacity:.6">Secret access: Press 6 three times quickly. Data saved in browser.</p>
-</div>
-</div>
-
+</form><p style="font-size:10px;text-align:center;margin-top:8px;opacity:.6">Email:Wellington.ke01@gmail.com<br>2 business days response</p></div></div></div>
+<div id="admin"><div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3>🔒 Admin Dashboard - All Applicants</h3><button onclick="hideAdmin()" style="padding:6px 12px;border-radius:8px;border:1px solid #ddd;cursor:pointer">Back to Jobs</button></div><div style="margin-top:12px;overflow:auto"><table><thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Position</th><th>Exp</th><th>Score</th><th>Status</th></tr></thead><tbody id="adminBody"></tbody></table></div><div style="margin-top:12px;display:flex;gap:8px"><button onclick="exportCSV()" style="padding:8px 14px;border-radius:8px;background:var(--navy);color:white;border:none;cursor:pointer;font-size:11px">Export CSV</button><button onclick="clearApplicants()" style="padding:8px 14px;border-radius:8px;background:#a00;color:white;border:none;cursor:pointer;font-size:11px">Clear All</button></div></div></div>
 <footer style="background:var(--navy);color:white;text-align:center;padding:16px;font-size:11px;margin-top:30px">© 2026 Wellington Movers | Moving Value. Connecting Markets. Building Tomorrow. | 0741929030</footer>
-
 <script>
 function selectPos(p){document.getElementById('position').value=p; document.querySelectorAll('.pos').forEach(e=>e.classList.remove('selected')); event.currentTarget.classList.add('selected'); document.getElementById('apply').scrollIntoView({behavior:'smooth'}); screenCV();}
 function screenCV(){
@@ -127,7 +87,7 @@ function screenCV(){
   const exp=document.getElementById('exp').value.toLowerCase();
   const skills=document.getElementById('skills').value.toLowerCase();
   const text=(exp+' '+skills); let score=30; if(!pos) return;
-  const keywords={'Truck Driver':['bce','license','truck','driving','safety','2 year','3 year'],'Lorry Driver':['lorry','bce','license'],'Fleet Manager':['manager','leadership','fleet','budget','logistics','team'],'Accountant':['cpa','accounting','quickbooks','excel','tax'],'Logistics Officer':['logistics','planning','supply'],'Customer Care':['customer','communication'],'Mover Loader':['mover','loader','physical']};
+  const keywords={'Truck Driver':['bce','license','truck','driving','safety','2 year','3 year'],'Lorry Driver':['lorry','bce','license'],'Fleet Manager':['manager','leadership','fleet','budget','logistics','team'],'Accountant':['cpa','accounting','quickbooks','excel','tax'],'Logistics Officer':['logistics','planning','supply'],'Customer Care':['customer','communication'],'Mover Loader':['mover','loader','physical'],'Packers':['pack','packing','handling','wrapping','organized','careful','inventory']};
   (keywords[pos]||[]).forEach(k=>{if(text.includes(k)) score+=12}); if(text.includes('year')) score+=10; if(score>100) score=100;
   const box=document.getElementById('scoreBox'); document.getElementById('cvScoreInput').value=score; box.style.display='block';
   if(score>=70){box.className='score-box score-high'; box.innerHTML='✅ HIGH FIT: '+score+'/100 - Strong match for '+pos;}
@@ -143,26 +103,10 @@ function handleSubmit(e){
   return true;
 }
 let pressCount=0; let lastPress=0;
-document.addEventListener('keydown',(ev)=>{
-  if(ev.key==='6'){
-    const now=Date.now();
-    if(now-lastPress>1500) pressCount=0;
-    pressCount++; lastPress=now;
-    if(pressCount>=3){pressCount=0; showAdmin();}
-  }
-});
-function showAdmin(){
-  let p=prompt('Admin Password:');
-  if(p==='0741929030' || p==='Wellington2026'){document.getElementById('mainJobs').style.display='none'; document.getElementById('admin').style.display='block'; loadAdmin();}
-  else if(p!==null) alert('Wrong password');
-}
+document.addEventListener('keydown',(ev)=>{if(ev.key==='6'){const now=Date.now(); if(now-lastPress>1500) pressCount=0; pressCount++; lastPress=now; if(pressCount>=3){pressCount=0; showAdmin();}}});
+function showAdmin(){let p=prompt('Admin Password:'); if(p==='0741929030' || p==='Wellington2026'){document.getElementById('mainJobs').style.display='none'; document.getElementById('admin').style.display='block'; loadAdmin();} else if(p!==null) alert('Wrong password');}
 function hideAdmin(){document.getElementById('admin').style.display='none'; document.getElementById('mainJobs').style.display='grid';}
-function loadAdmin(){
-  let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]');
-  let tbody=document.getElementById('adminBody');
-  if(arr.length===0){tbody.innerHTML='<tr><td colspan=7 style="text-align:center;padding:20px;opacity:.6">No applicants yet</td></tr>';return;}
-  tbody.innerHTML=arr.map(a=>`<tr><td>${a.date}</td><td>${a.name}</td><td>${a.phone}</td><td>${a.position}</td><td>${a.exp}</td><td><b style="color:${a.score>=70?'green':a.score>=45?'#b8860b':'red'}">${a.score}</b></td><td>${a.score>=70?'🟢 Interview':'🟡 Review'}</td></tr>`).join('');
-}
+function loadAdmin(){let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]'); let tbody=document.getElementById('adminBody'); if(arr.length===0){tbody.innerHTML='<tr><td colspan=7 style="text-align:center;padding:20px;opacity:.6">No applicants yet</td></tr>';return;} tbody.innerHTML=arr.map(a=>`<tr><td>${a.date}</td><td>${a.name}</td><td>${a.phone}</td><td>${a.position}</td><td>${a.exp}</td><td><b style="color:${a.score>=70?'green':a.score>=45?'#b8860b':'red'}">${a.score}</b></td><td>${a.score>=70?'🟢 Interview':'🟡 Review'}</td></tr>`).join('');}
 function exportCSV(){let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]'); let csv='Date,Name,Phone,Position,Exp,Score\n'+arr.map(a=>`"${a.date}","${a.name}","${a.phone}","${a.position}","${a.exp}",${a.score}`).join('\n'); let blob=new Blob([csv],{type:'text/csv'}); let url=URL.createObjectURL(blob); let a=document.createElement('a'); a.href=url; a.download='wellington_applicants.csv'; a.click();}
 function clearApplicants(){if(confirm('Clear all?')){localStorage.removeItem('wellington_applicants'); loadAdmin();}}
 </script>
