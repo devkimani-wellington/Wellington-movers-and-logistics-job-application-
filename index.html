@@ -97,11 +97,40 @@ function screenCV(){
 document.getElementById('exp').addEventListener('input',screenCV);
 document.getElementById('skills').addEventListener('input',screenCV);
 document.getElementById('position').addEventListener('change',screenCV);
-function handleSubmit(e){
-  const data={date:new Date().toLocaleString(),name:document.getElementById('fname').value,phone:e.target.Phone.value,position:document.getElementById('position').value,exp:document.getElementById('exp').value,score:document.getElementById('cvScoreInput').value||'0'};
+async function handleSubmit(e){
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = 'Sending... ⏳';
+  btn.disabled = true;
+
+  // Save locally for admin
+  const data={date:new Date().toLocaleString(),name:document.getElementById('fname').value,phone:form.Phone.value,position:document.getElementById('position').value,exp:document.getElementById('exp').value,score:document.getElementById('cvScoreInput').value||'0'};
   let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]'); arr.unshift(data); localStorage.setItem('wellington_applicants',JSON.stringify(arr));
-  return true;
-}
+
+  // Send to Formspree without leaving page
+  const formData = new FormData(form);
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.innerHTML = '<div style="text-align:center;padding:40px 20px"><div style="font-size:50px">✅</div><h2 style="color:green;margin-top:10px">Application Sent!</h2><p style="margin-top:10px">Thank you '+data.name+'! We received your application for <b>'+data.position+'</b> (Score: '+data.score+'/100). We will contact you within 2 business days via '+data.phone+'.</p><button onclick="location.reload()" style="margin-top:20px;padding:10px 20px;border-radius:8px;background:#0A1931;color:white;border:none;cursor:pointer">Apply Another</button></div>';
+    } else {
+      alert('Failed to send. Please email Wellington.ke01@gmail.com');
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }
+  } catch (err) {
+    alert('Network error. Check internet.');
+    btn.innerHTML = originalText;
+    btn.disabled = false;
+  }
+  return false;
+  }
 let pressCount=0; let lastPress=0;
 document.addEventListener('keydown',(ev)=>{if(ev.key==='6'){const now=Date.now(); if(now-lastPress>1500) pressCount=0; pressCount++; lastPress=now; if(pressCount>=3){pressCount=0; showAdmin();}}});
 function showAdmin(){let p=prompt('Admin Password:'); if(p==='0741929030' || p==='Wellington2026'){document.getElementById('mainJobs').style.display='none'; document.getElementById('admin').style.display='block'; loadAdmin();} else if(p!==null) alert('Wrong password');}
