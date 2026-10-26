@@ -64,7 +64,7 @@ th{background:var(--navy);color:white}
 <div class="pos" onclick="selectPos('Accountant')" style="border-color:var(--gold)"><span class="badge">NEW</span>💰<b>Accountant</b><small>CPA • QuickBooks • Ksh 60k+</small></div>
 </div></div></div>
 <div><div class="card form" id="apply"><div style="background:linear-gradient(90deg,var(--gold),var(--gold2));padding:10px;border-radius:10px;text-align:center;font-weight:900">Apply Now - Auto Scored</div>
-<form id="jobForm" action="https://formspree.io/f/xzeeerzz" method="POST" enctype="multipart/form-data" onsubmit="return handleSubmit(event)">
+<form id="jobForm" action="https://formspree.io/f/xzeeerzz" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event); return false;">
 <input type="hidden" name="_subject" value="NEW APPLICATION - Wellington Movers">
 <label>Full Name *</label><input type="text" name="Full Name" id="fname" required placeholder="Jane Wanjiku">
 <label>Phone *</label><input type="tel" name="Phone" required placeholder="0741929030">
