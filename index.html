@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Careers - Wellington Movers v2.0</title>
+
+<!-- LINK PREVIEW FOR WHATSAPP / FACEBOOK / LINKEDIN -->
+<meta property="og:title" content="We're Hiring! Wellington Movers - 7 Positions">
+<meta property="og:description" content="Truck Driver, Fleet Manager, Accountant + 4 more roles. Competitive pay + Medical. Nairobi. Apply now! Moving Value. Connecting Markets. Building Tomorrow.">
+<meta property="og:image" content="preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://wellington-movers.netlify.app">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="preview.jpg">
+
 <style>
 :root{--navy:#0A1931;--gold:#C9A227;--gold2:#FFD700}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter, sans-serif}
@@ -52,7 +64,7 @@ th{background:var(--navy);color:white}
 <div class="hero">
 <h1>Join Our Team — We're Hiring 7 Roles!</h1>
 <p>Be part of Nairobi's fastest growing logistics company. Competitive pay + Medical + Growth</p>
-<div style="margin-top:18px;display:inline-block;background:rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:12px;border:1px solid rgba(201,162,39,.3)">Movers always stay succesfull the longest</div>
+<div style="margin-top:18px;display:inline-block;background:rgba(255,255,255,.1);padding:8px 16px;border-radius:20px;font-size:12px;border:1px solid rgba(201,162,39,.3)">Movers always stay successful the longest</div>
 </div>
 
 <div class="jobs" id="mainJobs">
@@ -130,7 +142,6 @@ function handleSubmit(e){
   let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]'); arr.unshift(data); localStorage.setItem('wellington_applicants',JSON.stringify(arr));
   return true;
 }
-// SECRET ADMIN: Press 6 three times quickly
 let pressCount=0; let lastPress=0;
 document.addEventListener('keydown',(ev)=>{
   if(ev.key==='6'){
@@ -149,11 +160,11 @@ function hideAdmin(){document.getElementById('admin').style.display='none'; docu
 function loadAdmin(){
   let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]');
   let tbody=document.getElementById('adminBody');
-  if(arr.length===0){tbody.innerHTML='<tr><td colspan=7 style=\"text-align:center;padding:20px;opacity:.6\">No applicants yet</td></tr>';return;}
+  if(arr.length===0){tbody.innerHTML='<tr><td colspan=7 style="text-align:center;padding:20px;opacity:.6">No applicants yet</td></tr>';return;}
   tbody.innerHTML=arr.map(a=>`<tr><td>${a.date}</td><td>${a.name}</td><td>${a.phone}</td><td>${a.position}</td><td>${a.exp}</td><td><b style="color:${a.score>=70?'green':a.score>=45?'#b8860b':'red'}">${a.score}</b></td><td>${a.score>=70?'🟢 Interview':'🟡 Review'}</td></tr>`).join('');
 }
 function exportCSV(){let arr=JSON.parse(localStorage.getItem('wellington_applicants')||'[]'); let csv='Date,Name,Phone,Position,Exp,Score\n'+arr.map(a=>`"${a.date}","${a.name}","${a.phone}","${a.position}","${a.exp}",${a.score}`).join('\n'); let blob=new Blob([csv],{type:'text/csv'}); let url=URL.createObjectURL(blob); let a=document.createElement('a'); a.href=url; a.download='wellington_applicants.csv'; a.click();}
 function clearApplicants(){if(confirm('Clear all?')){localStorage.removeItem('wellington_applicants'); loadAdmin();}}
 </script>
 </body>
-  </html>
+                                                                                                                                                                                                       </html>
