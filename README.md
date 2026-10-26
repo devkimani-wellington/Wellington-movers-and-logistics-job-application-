@@ -1,4 +1,4 @@
-# Wellington-movers-and-logistics-job-application-
+
 # Wellington Movers Investments & Logistics - Job Application Portal
 
 ![Wellington Movers Logo](logo.png)
